@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- schema/.. & schema/beans/....xsd both xsi needs to be together.-->
+<!-- Always remember to add the "beans/ in the xmlns otherwise it will give the error of "matching wildcard" at the <context:annotation-config>" -->
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:aop="http://www.springframework.org/schema/aop" 
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans 
+classpath:/org/springframework/beans/factory/xml/spring-beans.xsd 
+http://www.springframework.org/schema/context 
+classpath:/org/springframework/context/config/spring-context.xsd
+">
+
+<!-- We can use the mix of annotations and xml as well. -->
+   	<context:annotation-config />
+	<bean class="com.weshopify.core.CustomerConfig"></bean>
+</beans>
